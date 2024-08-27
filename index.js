@@ -29,12 +29,12 @@ app.get("/", async (req, res) => {
 
 const port = parseInt(process.env.PORT) || 8080;
 app.listen(port, async () => {
-  //   console.log("process.env: ", process.env);
-  //   await pool.query(`CREATE TABLE IF NOT EXISTS visits (
-  //     id SERIAL NOT NULL,
-  //     created_at timestamp NOT NULL,
-  //     PRIMARY KEY (id)
-  //   );`);
+  console.log("process.env: ", process.env);
+  await pool.query(`CREATE TABLE IF NOT EXISTS visits (
+      id SERIAL NOT NULL,
+      created_at timestamp NOT NULL,
+      PRIMARY KEY (id)
+    );`);
   console.log(`helloworld: listening on port ${port}`);
 });
 // import express from "express";
